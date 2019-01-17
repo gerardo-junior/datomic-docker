@@ -10,7 +10,7 @@
 
 ## datomic-free [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gerardojunior/datomic-free/)
 - [stable](https://github.com/gerardo-junior/dynamodb-docker/blob/master/datomic-free/Dockerfile), [latest](https://github.com/gerardo-junior/dynamodb-docker/blob/develop/datomic-free/Dockerfile), [1.0.0](https://github.com/gerardo-junior/dynamodb-docker/blob/1.0.0/datomic-free/Dockerfile)
-    - [library/openjdk](https://hub.docker.com/_/openjdk) 8-alpine
+    - [library/openjdk](https://hub.docker.com/_/openjdk) 13-alpine
       - [openjdk](https://openjdk.java.net/) 13
     - [datomic](https://www.datomic.com/) 0.9.5703
 
