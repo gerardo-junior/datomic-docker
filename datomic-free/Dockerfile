@@ -2,7 +2,7 @@ ARG OPENJDK_VERSION="13"
 
 FROM library/openjdk:$OPENJDK_VERSION-alpine
 
-LABEL Maintainer="Gerardo Junior <me@gerardo-junior.com>"
+LABEL maintainer="Gerardo Junior <me@gerardo-junior.com>"
 LABEL url="https://github.com/gerardo-junior/datomic-docker.git"
 
 ENV DATOMIC_PATH /opt/datomic
