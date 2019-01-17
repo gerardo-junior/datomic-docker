@@ -1,3 +1,4 @@
+# Setting packages version
 ARG OPENJDK_VERSION="13"
 
 FROM library/openjdk:$OPENJDK_VERSION-alpine
@@ -32,6 +33,7 @@ RUN set -xe && \
 COPY ./tools /opt/tools
 RUN chmod -R +x /opt/tools/
 
+# Setting project directory
 VOLUME [$DATOMIC_PATH, "/run/datomic"]
 WORKDIR $DATOMIC_PATH
 EXPOSE $DATOMIC_PORT 4335 4336
