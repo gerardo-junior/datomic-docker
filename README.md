@@ -27,7 +27,7 @@ to build the image you need install the [docker engine](https://www.docker.com/)
 *~ You can try building with different versions of software with docker args, for example: DATOMIC_VERSION=0.9.5703 ~*
 ```bash
 # datomic-free
-docker build https://github.com/gerardo-junior/datomic-docker.git --tag gerardojunior/datomic-free
+docker build https://github.com/gerardo-junior/datomic-docker.git#:datomic-free  --tag gerardojunior/datomic-free
 ```
 ## How to use
 
