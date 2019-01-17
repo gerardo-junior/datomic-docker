@@ -16,7 +16,9 @@ ARG DATOMIC_SHA256="22b83d1f2baefaee3e7941ad57df6d77635c3fdbc02a37bdb1cc281d9e7b
 ARG DATOMIC_SOURCE_URL="https://my.datomic.com/downloads/free"
 RUN set -xe && \
     wget ${DATOMIC_SOURCE_URL}/${DATOMIC_VERSION} && \
-    echo "${DATOMIC_SHA256}  ${DATOMIC_VERSION}" | sha256sum -c
+    if [ -n "$DATOMIC_SHA256" ]; then \
+	    echo "${DATOMIC_SHA256}  ${DATOMIC_VERSION}" | sha256sum -c - \
+    ; fi
     
 RUN set -xe && \
     mkdir -p ${DATOMIC_PATH} && \
