@@ -4,7 +4,7 @@
     [+] AUTOR:        Gerardo Junior
     [+] SITE:         https://gerardo-junior.com
     [+] EMAIL:        me@gerardo-junior.com
-    [+] GITHUB:       https://github.com/gerardo-junior/datomic-docker/
+    [+] GITHUB:       https://github.com/gerardo-junior/datomic-docker.git
     [+] TELEGRAM:     @MrGerardoJunior
 ```
 
@@ -12,6 +12,9 @@
 | :------------: | 
 | [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gerardojunior/datomic-free/) |
 
+- [stable](https://github.com/gerardo-junior/datomic-docker/blob/master/Dockerfile), [latest](https://github.com/gerardo-junior/datomic-docker/blob/develop/Dockerfile), [1.0.0](https://github.com/gerardo-junior/datomic-docker/blob/1.0.0/Dockerfile)
+  - [datomic](https://www.datomic.com/) 0.9.5703
+  - [openjdk](https://openjdk.java.net/) 13
 
 ## Come on, do your tests
 
@@ -25,11 +28,8 @@ to build the image you need install the [docker engine](https://www.docker.com/)
 
 *~ You can try building with different versions of software with docker args, for example: DATOMIC_VERSION=0.9.5703 ~*
 ```bash
-git clone https://github.com/gerardo-junior/datomic-docker.git
-
 # datomic-free
-cd datomic-docker/datomic-free
-docker build . --tag gerardojunior/datomic-free
+docker build https://github.com/gerardo-junior/datomic-docker.git --tag gerardojunior/datomic-free
 ```
 ## How to use
 
@@ -58,18 +58,18 @@ datomic:
 # (...)
 volumes:
   dbdata:
-    name: dbdata
+    name: datomic-dbdata
         
 ```
 
 ## How to enter datomic-free image shell
  
 ```bash
-docker run -it --rm gerardojunior/datomic-free:stable /bin/sh
+docker run -it --rm gerardojunior/datomic-free:stable sh
 
 # or with docker-compose
 
-docker-compose run datomic /bin/sh
+docker-compose run datomic sh
 ```
 
 ### License  
