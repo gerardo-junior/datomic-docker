@@ -8,13 +8,11 @@
     [+] TELEGRAM:     @MrGerardoJunior
 ```
 
-| datomic-free  |
-| :------------: | 
-| [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gerardojunior/datomic-free/) |
-
-- [stable](https://github.com/gerardo-junior/datomic-docker/blob/master/Dockerfile), [latest](https://github.com/gerardo-junior/datomic-docker/blob/develop/Dockerfile), [1.0.0](https://github.com/gerardo-junior/datomic-docker/blob/1.0.0/Dockerfile)
-  - [datomic](https://www.datomic.com/) 0.9.5703
-  - [openjdk](https://openjdk.java.net/) 13
+## datomic-free [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gerardojunior/datomic-free/)
+- [stable](https://github.com/gerardo-junior/dynamodb-docker/blob/master/datomic-free/Dockerfile), [latest](https://github.com/gerardo-junior/dynamodb-docker/blob/develop/datomic-free/Dockerfile), [1.0.0](https://github.com/gerardo-junior/dynamodb-docker/blob/1.0.0/datomic-free/Dockerfile)
+    - [library/openjdk](https://hub.docker.com/_/openjdk) 13-alpine
+      - [openjdk](https://openjdk.java.net/) 13
+    - [datomic free version](https://www.datomic.com/) 0.9.5703
 
 ## Come on, do your tests
 
