@@ -8,8 +8,6 @@ LABEL url="https://github.com/gerardo-junior/datomic-docker.git"
 ENV DATOMIC_PATH /opt/datomic
 ENV DATOMIC_PORT 4334
 
-RUN mkdir -p ${DATOMIC_PATH}
-
 WORKDIR /tmp
 
 ARG DATOMIC_VERSION="0.9.5703"
@@ -20,6 +18,7 @@ RUN set -xe && \
     echo "${DATOMIC_SHA256}  ${DATOMIC_VERSION}" | sha256sum -c
     
 RUN set -xe && \
+    mkdir -p ${DATOMIC_PATH} && \
     unzip ${DATOMIC_VERSION} && \   
     rm ${DATOMIC_VERSION} && \
     mv /tmp/datomic-free-${DATOMIC_VERSION}/* ${DATOMIC_PATH} && \
@@ -30,7 +29,7 @@ RUN set -xe && \
     sed "s/log-dir=log/log-dir=\/proc\/self\/fd/1" -i transactor.properties && \
     sed "s/host=localhost/host=0.0.0.0/" -i transactor.properties
 
-COPY ./tools/entrypoint.sh /opt/tools/entrypoint.sh
+COPY ./tools /opt/tools
 RUN chmod -R +x /opt/tools/
 
 VOLUME [$DATOMIC_PATH, "/run/datomic"]
